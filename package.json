@@ -9,11 +9,11 @@
     "./out"
   ],
   "bugs": {
-    "url": "https://github.com/artcabrera/remix-run-themes/issues"
+    "url": "https://github.com/artcabrera/remix-run-theme/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artcabrera/remix-run-themes.git"
+    "url": "git+https://github.com/artcabrera/remix-run-theme.git"
   },
   "author": "artcabrera",
   "license": "Unlicense",
