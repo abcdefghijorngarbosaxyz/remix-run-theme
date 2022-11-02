@@ -30,12 +30,14 @@
     "@remix-run/react": "^1.7.4",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
+    "microbundle": "^0.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.8.4"
   },
   "scripts": {
     "clean": "rm -rf out",
-    "build": "yarn clean && tsc"
+    "prebuild": "npm run clean",
+    "build": "microbundle --jsx React.createElement --compress --no-sourcemap"
   }
 }
