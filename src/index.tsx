@@ -13,7 +13,7 @@ interface ValueObject {
   [themeName: string]: string;
 }
 
-interface UseThemeProps {
+export interface UseThemeProps {
   /** List of all available theme names */
   themes: string[];
   /** Forced theme name for the current page */
@@ -28,7 +28,7 @@ interface UseThemeProps {
   systemTheme?: "dark" | "light";
 }
 
-interface ThemeProviderProps {
+export interface ThemeProviderProps {
   /** List of all available theme names */
   themes?: string[];
   /** Forced theme name for the current page */
@@ -92,7 +92,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
   );
   const attrs = !value ? themes : Object.values(value);
 
-  const applyTheme = useCallback((theme: string) => {
+  const applyTheme = useCallback((theme: any) => {
     let resolved = theme;
     if (!resolved) return;
 
@@ -130,7 +130,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
   }, []);
 
   const setTheme = useCallback(
-    (theme: string) => {
+    (theme: any) => {
       setThemeState(theme);
 
       // Save to storage
@@ -184,7 +184,7 @@ const Theme: React.FC<ThemeProviderProps> = ({
 
   // Whenever theme or forcedTheme changes, apply it
   useEffect(() => {
-    applyTheme(forcedTheme ?? theme!);
+    applyTheme(forcedTheme ?? theme);
   }, [forcedTheme, theme]);
 
   const providerValue = useMemo(
