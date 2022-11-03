@@ -4,7 +4,7 @@
   "description": "Remix-run Light / Dark theme. Tweaked from next-themes to work with Remix.",
   "main": "./out/index.js",
   "types": "./out/index.d.ts",
-  "source": "./src/index.tsx",
+  "source": "index.tsx",
   "files": [
     "./out"
   ],
