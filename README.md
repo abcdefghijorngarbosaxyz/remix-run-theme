@@ -1,2 +1,2 @@
-This package is just a tweaked version of next-themes to work with remix-run.
-For usage and documentation please go to next-themes [main page](https://www.npmjs.com/package/next-themes).
+Deprecation Notice:
+The latest version of next-themes is now react agnostic, and the "next" peer dependency is removed. It now can be used with Remix Run out-of-the-box.
